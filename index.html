@@ -1,129 +1,165 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <title>Poke Shop</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reserva de Cine</title>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Hidden brand</a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-        </ul>
+    <div class="contenedor">
+        <label>Elige una pelicula:</label>
+        <select id="pelicula">
+          <option value="200">Asterigos Curse of the Stars</option>
+          <option value="150">Persona</option>
+          <option value="350">Top Speed</option>
+          <option value="175">Argentina 1985</option>
+        </select>
       </div>
-    </div>
-  </nav>
-  <h1>Tienda Pokemón</h1>
 
 
-  <section id="sidebar">
-    <div>
-      <details>
-        <summary>Tipos</summary>
-        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tipos" aria-expanded="false" aria-controls="collapseExample">
-      Tipo
-      </button> -->
-        <form class="ml-md-2 form-check" id="tipos">
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="acero">
-            <label for="acero" class="pl-1 pt-sm-0 pt-1">Acero</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="agua">
-            <label for="agua" class="pl-1 pt-sm-0 pt-1">Agua</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="bicho">
-            <label for="bicho" class="pl-1 pt-sm-0 pt-1">Bicho</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="dragon">
-            <label for="dragon" class="pl-1 pt-sm-0 pt-1">Dragon</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="electrico">
-            <label for="electrico" class="pl-1 pt-sm-0 pt-1">Electrico</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="fantasma">
-            <label for="fantasma" class="pl-1 pt-sm-0 pt-1">Fantasma</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="fuego">
-            <label for="fuego" class="pl-1 pt-sm-0 pt-1">Fuego</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="hada">
-            <label for="hada" class="pl-1 pt-sm-0 pt-1">Hada</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="hielo">
-            <label for="hielo" class="pl-1 pt-sm-0 pt-1">Hielo</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="lucha">
-            <label for="lucha" class="pl-1 pt-sm-0 pt-1">Lucha</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="normal">
-            <label for="normal" class="pl-1 pt-sm-0 pt-1">Normal</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="planta">
-            <label for="planta" class="pl-1 pt-sm-0 pt-1">Planta</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="psiquico">
-            <label for="psiquico" class="pl-1 pt-sm-0 pt-1">Psiquico</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="roca">
-            <label for="roca" class="pl-1 pt-sm-0 pt-1">Roca</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="siniestro">
-            <label for="siniestro" class="pl-1 pt-sm-0 pt-1">Siniestro</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="tierra">
-            <label for="tierra" class="pl-1 pt-sm-0 pt-1">Tierra</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="veneno">
-            <label for="veneno" class="pl-1 pt-sm-0 pt-1">Veneno</label>
-          </div>
-          <div class="form-inline border rounded p-sm-1 my-1">
-            <input type="checkbox" name="type" id="volador">
-            <label for="volador" class="pl-1 pt-sm-0 pt-1">Volador</label>
-          </div>
-        </form>
-      </details>
-    </div>
+      <ul class="disponibilidad">
+        <li>
+          <div class="asiento"></div>
+          <small>Disponible</small>
+        </li>
+  
+        <li>
+          <div class="asiento seleccionado"></div>
+          <small>Seleccionado</small>
+        </li>
+  
+        <li>
+          <div class="asiento acupado"></div>
+          <small>Ocupado</small>
+        </li>
+      </ul>
 
-  </section>
+      <div class="sala">
+        <div class="pantalla"></div>
+        <div class="row">
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+        </div>
+        <div class="row">
+          <div class="asiento"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+        </div>
+  
+        <div class="row">
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
 
+        </div>
+  
+        <div class="row">
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+        </div>
+  
+        <div class="row">
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+        </div>
+  
+        <div class="row">          
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento acupado"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+          <div class="asiento"></div>
+        </div>
 
+        <div class="row">
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+          </div>
 
-
-  <script src="./main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
+          <div class="row">
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+          </div>
+      </div>
+    
+      <br>
+      <br>
+      <p class="checkout">
+        Has elegido <span id="contador">0</span> asientos por un total de $<span id="total">0</span>
+      </p>
+      <button>pagar</button>
+  
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
 </body>
-
 </html>
